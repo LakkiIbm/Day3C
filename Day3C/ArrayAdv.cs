@@ -92,29 +92,53 @@ using System.Linq;
 
 
 //------------------Exploring various methods in array----------------------------
+//namespace Day3C
+//{
+//    internal class ArrayAdv
+//{
+//    static void Main(string[] args)
+//    {
+//        int[] b = { 12, 17, 10, 20, 14, 5, 30 };
+//        int[] temp = b;
+//        Console.Write("Original Array: ");
+//        foreach (int i in b)
+//            Console.Write(i + " ");
+//        Console.WriteLine();
+//        Array.Reverse(b);
+//        Console.Write("Reversed Array: ");
+//        foreach (int i in b)
+//            Console.Write(i + " ");
+//        Console.WriteLine();
+//        Array.Sort(temp);
+//        Console.Write("Sorted Array: ");
+//        foreach (int i in temp)
+//            Console.Write(i + " ");
+//        Console.WriteLine();
+//        Console.ReadLine();
+//    }
+//}
+//}
+
+
+//---------------------Jagged array with 2D array--------------------------------
 namespace Day3C
 {
     internal class ArrayAdv
-{
-    static void Main(string[] args)
     {
-        int[] b = { 12, 17, 10, 20, 14, 5, 30 };
-        int[] temp = b;
-        Console.Write("Original Array: ");
-        foreach (int i in b)
-            Console.Write(i + " ");
-        Console.WriteLine();
-        Array.Reverse(b);
-        Console.Write("Reversed Array: ");
-        foreach (int i in b)
-            Console.Write(i + " ");
-        Console.WriteLine();
-        Array.Sort(temp);
-        Console.Write("Sorted Array: ");
-        foreach (int i in temp)
-            Console.Write(i + " ");
-        Console.WriteLine();
-        Console.ReadLine();
+        static void Main(string[] args)
+        {
+            int[][,] arr = new int[][,]
+            {
+                new int[,]{{4,2},{5,3}, { 6,4} },
+                new int[,]{ { 7, 5 }, { 8, 6 } },
+                new int[,]{{1,1}}
+            };
+            Console.WriteLine("The values in the array are:");
+            for(int i = 0; i < arr.Length; i++)
+                foreach (int n in arr[i])
+                    Console.WriteLine(n);
+
+            Console.ReadKey();
+        }
     }
-}
 }
