@@ -86,27 +86,49 @@
 
 //----------------------------------Linked List------------------------------------
 //--------------------------------------------------------------------------
+//using System;
+//using System.Collections.Generic;
+//namespace Day3C
+//{
+//    class CollData
+//    {
+//        static void Main(string[] args)
+//        {
+//            var value = new LinkedList<int>();
+//            value.AddLast(10);
+//            value.AddLast(20);
+//            value.AddLast(30);
+//            value.AddFirst(40);
+//            value.AddFirst(50);
+//            value.AddFirst(80);
+//            LinkedListNode<int> node = value.Find(30);
+//            value.AddBefore(node, 25);
+//            Console.WriteLine("The values in the Linked List are:");
+//            foreach (var item in value)
+//                Console.WriteLine(item);
+//            Console.ReadLine();
+//        }
+//    }
+//}
+
+
+//--------------------------Bit-Array-----------------------------------
+//-----------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-namespace Day3C
+using System.Collections;
+class GFG
 {
-    class CollData
-    {
-        static void Main(string[] args)
-        {
-            var value = new LinkedList<int>();
-            value.AddLast(10);
-            value.AddLast(20);
-            value.AddLast(30);
-            value.AddFirst(40);
-            value.AddFirst(50);
-            value.AddFirst(80);
-            LinkedListNode<int> node = value.Find(30);
-            value.AddBefore(node, 25);
-            Console.WriteLine("The values in the Linked List are:");
-            foreach (var item in value)
-                Console.WriteLine(item);
-            Console.ReadLine();
-        }
-    }
+	public static void Main()
+	{
+		BitArray myBitArr = new BitArray(5);
+
+		myBitArr[0] = true;
+		myBitArr[1] = true;
+		myBitArr[2] = false;
+		myBitArr[3] = true;
+		myBitArr[4] = false;
+
+		Console.WriteLine(myBitArr.Get(2));
+		Console.WriteLine(myBitArr.Get(3));
+	}
 }
